@@ -1,0 +1,95 @@
+:root {
+    --primary-color: #314d3e;
+    --secondary-color: #66afe9;
+    --border-color: #00254d;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --font-size-small: 12px;
+    --font-size-medium: 14px;
+    --border-radius: 10px;
+    --padding: 8px;
+}
+
+.container {
+    width: 280px;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: var(--font-size-medium);
+    font-weight: bold;
+    padding: var(--padding);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--primary-color);
+}
+
+.textbox {
+    width: 100%;
+    font-size: var(--font-size-small);
+    margin: 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.textbox:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(102, 175, 233, 0.5);
+}
+
+.bookmarks {
+    margin: 5px 0;
+    padding: var(--padding);
+    display: grid;
+    gap: 10px;
+}
+
+.bookmark {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.bookmark:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.bookmark-title {
+    padding-left: 8px;
+    font-size: var(--font-size-medium);
+    color: var(--text-color);
+}
+
+.bookmark-controls img {
+    margin: 0 8px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.bookmark-controls img:hover {
+    transform: scale(1.1);
+}
+
+.bookmark-controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: auto;
+}
